@@ -1,0 +1,21 @@
+# --- core (required) ---
+pandas>=2.0
+numpy>=1.24
+scipy>=1.11
+scikit-learn>=1.3
+PyYAML>=6.0
+
+# --- demo UI ---
+streamlit>=1.30
+plotly>=5.18
+
+# --- semantic encoder (RECOMMENDED, optional) ---
+# The engine runs fully without these: `embeddings.backend: auto` degrades to a
+# deterministic TF-IDF+SVD encoder. Install these for the BGE semantic path.
+sentence-transformers>=2.5
+torch>=2.0
+
+# --- ANN index (optional) ---
+# 120 hotels -> exact NumPy cosine is ~40us. FAISS matters at Expedia scale (1M+
+# properties); the interface is already in place for it.
+faiss-cpu>=1.7
